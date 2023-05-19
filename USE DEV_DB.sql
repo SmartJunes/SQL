@@ -1,1 +1,1 @@
-select * from tUser
+select * from tUser where user_ID = 2
