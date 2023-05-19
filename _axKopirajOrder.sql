@@ -1,10 +1,8 @@
-
-/****** Object:  StoredProcedure [dbo].[_axKopirajOrder]    Script Date: 18.5.2023. 9:36:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-ALTER                   Procedure [dbo].[_axKopirajOrder] (
+CREATE                   Procedure [dbo].[_axKopirajOrder] (
 										@cKeyPolazni			VARCHAR(13),
 										@VD						char(4),
 										@cZadrziBroj			Char(1) = 'N',
@@ -32,6 +30,8 @@ ARGUMENTI			:@cKeyPolazni		- acKey dokumenta iz tHE_Order koji se kopira
 					 @cNewKey			- acKey novokreiranog dokumenta
 					 @cErrMsg			- poruka greške
 					 @cStatusOut		- Izlazni status
+					 TESSSSSSSSSSTTTTTTT TT
+					  TESSSSSSSSSSTTTTTTT 1111
 
 AUTOR				:  ZP
 DATUM IZRADE		: 29.11.17.
@@ -923,3 +923,4 @@ ErrOut:
 		ROLLBACK TRANSACTION
 	RAISERROR(@cErrMsg,16,1,'')
 END
+GO
